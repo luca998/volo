@@ -1,10 +1,10 @@
-carburante = 1460
-consumo_h = 320
+carburante = 1460.
+consumo_h = 320.
 
-durata_volo = carburante/consumo_h
-min = float (float(carburante % consumo_h)/float(consumo_h))
-minuti1 = float (min*60)
-minuti = int (minuti1)
-sec = minuti1 - minuti
-secondi = int(sec*60)
-print "la durata massima di volo e'",durata_volo,"ore",minuti,"minuti",secondi,"secondi"  
+durata_volo = int (carburante/consumo_h)
+resto_h= float (float(carburante % consumo_h)/float(consumo_h))
+minuti_dec = float (resto_h*60)
+minuti = int (minuti_dec)
+diff_min = minuti_dec - minuti
+secondi = int(diff_min*60)
+print "la durata massima di volo e'",durata_volo,"ore",minuti,"minuti",secondi,"secondi" 
